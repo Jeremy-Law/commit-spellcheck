@@ -1,0 +1,43 @@
+{
+  "name": "commit-message-spellcheck",
+  "displayName": "Commit Message Spell Check",
+  "description": "Spell-checks your Git commit message in the editor that opens after `git commit`.",
+  "version": "0.1.0",
+  "publisher": "your-publisher-name",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Linters",
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:git-commit"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "commitSpellCheck.addWordToDictionary",
+        "title": "Commit Spell Check: Add Word to Dictionary"
+      }
+    ],
+    "configuration": {
+      "title": "Commit Message Spell Check",
+      "properties": {
+        "commitSpellCheck.userWords": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "Words that should always be treated as correctly spelled in commit messages."
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "dictionary-en": "^3.2.0",
+    "nspell": "^2.1.5"
+  }
+}
