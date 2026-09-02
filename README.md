@@ -3,7 +3,7 @@
 A VS Code extension that spell-checks your Git commit message in the editor
 that opens after running `git commit` (with no `-m`).
 
-## How it works
+## Usage
 
 - VS Code assigns the language id `git-commit` to the temporary
   `COMMIT_EDITMSG` file Git opens for editing. This extension activates on
@@ -20,7 +20,26 @@ that opens after running `git commit` (with no `-m`).
   spelling suggestions, or an option to permanently add the word to your
   personal dictionary (stored in the `commitSpellCheck.userWords` setting).
 
-## Setup
+### Installing
+
+Install the packaged `.vsix` via "Extensions: Install from VSIX..." in the
+Command Palette, or from a terminal:
+
+```bash
+code --install-extension <file>.vsix
+```
+
+### Configuration
+
+| Setting                      | Description                                           |
+| ----------------------------- | ------------------------------------------------------ |
+| `commitSpellCheck.userWords` | Array of words to always treat as correctly spelled.  |
+
+## Development
+
+Instructions below are for working on the extension itself.
+
+### Running locally
 
 ```bash
 npm install
@@ -36,23 +55,20 @@ git commit
 
 (without `-m`, so the commit message editor actually opens).
 
-## Packaging for real use
+The extension is plain JavaScript (`src/extension.js`) — there's no build
+step, so changes are picked up on the next Extension Development Host reload
+(`Ctrl+Shift+F5` / `Cmd+Shift+F5` in that window, or re-pressing `F5`).
+
+### Packaging
 
 ```bash
 npm install -g @vscode/vsce
 vsce package
 ```
 
-This produces a `.vsix` file you can install via "Extensions: Install from
-VSIX..." in the Command Palette, or `code --install-extension <file>.vsix`.
+This produces a `.vsix` file (see [Installing](#installing) above).
 
-## Configuration
-
-| Setting                         | Description                                             |
-| -------------------------------- | -------------------------------------------------------- |
-| `commitSpellCheck.userWords`     | Array of words to always treat as correctly spelled.     |
-
-## Ideas for extending this
+### Ideas for extending this
 
 - Support other languages by swapping in `dictionary-<locale>` packages and
   adding a setting to pick one.
