@@ -4,6 +4,7 @@
   "description": "Spell-checks your Git commit message in the editor that opens after `git commit`.",
   "version": "0.1.0",
   "publisher": "your-publisher-name",
+  "license": "GPL-3.0-or-later",
   "engines": {
     "vscode": "^1.85.0"
   },

@@ -79,3 +79,12 @@ This produces a `.vsix` file (see [Installing](#installing) above).
   line that `git commit --verbose` inserts (everything below it is the diff
   and is already skipped here since diff lines are prefixed, but the `+`/`-`
   markers aren't currently stripped).
+
+## License
+
+Copyright (C) 2026 Jeremy Lawson
+
+This program is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the Free
+Software Foundation, either version 3 of the License, or (at your option)
+any later version. See [LICENSE](LICENSE) for the full text.
