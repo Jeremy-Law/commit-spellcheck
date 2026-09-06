@@ -47,9 +47,9 @@ To run the extension in your regular VS Code instance:
 
    Every installed extension lives there as its own subfolder, named
    `<publisher>.<name>-<version>`. This project's `package.json` currently
-   has `"publisher": "your-publisher-name"`, `"name":
+   has `"publisher": "Jeremy-Law"`, `"name":
    "commit-message-spellcheck"`, and `"version": "0.1.0"`, so the folder
-   name to use is `your-publisher-name.commit-message-spellcheck-0.1.0`.
+   name to use is `Jeremy-Law.commit-message-spellcheck-0.1.0`.
 
    Get this project's contents into a folder of that exact name inside the
    extensions folder, using either a copy (a snapshot, independent of the
@@ -64,11 +64,11 @@ To run the extension in your regular VS Code instance:
 
    # Copy:
    cp -r /path/to/commit-spellcheck \
-     ~/.vscode/extensions/your-publisher-name.commit-message-spellcheck-0.1.0
+     ~/.vscode/extensions/Jeremy-Law.commit-message-spellcheck-0.1.0
 
    # Or symlink instead:
    ln -s /path/to/commit-spellcheck \
-     ~/.vscode/extensions/your-publisher-name.commit-message-spellcheck-0.1.0
+     ~/.vscode/extensions/Jeremy-Law.commit-message-spellcheck-0.1.0
    ```
 
    **Windows (PowerShell):**
@@ -78,12 +78,12 @@ To run the extension in your regular VS Code instance:
 
    # Copy:
    Copy-Item -Recurse "C:\path\to\commit-spellcheck" `
-     "$env:USERPROFILE\.vscode\extensions\your-publisher-name.commit-message-spellcheck-0.1.0"
+     "$env:USERPROFILE\.vscode\extensions\Jeremy-Law.commit-message-spellcheck-0.1.0"
 
    # Or symlink instead (requires Developer Mode enabled, or an
    # Administrator PowerShell prompt):
    New-Item -ItemType SymbolicLink `
-     -Path "$env:USERPROFILE\.vscode\extensions\your-publisher-name.commit-message-spellcheck-0.1.0" `
+     -Path "$env:USERPROFILE\.vscode\extensions\Jeremy-Law.commit-message-spellcheck-0.1.0" `
      -Target "C:\path\to\commit-spellcheck"
    ```
 
