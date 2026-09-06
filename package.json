@@ -36,9 +36,5 @@
         }
       }
     }
-  },
-  "dependencies": {
-    "dictionary-en": "^3.2.0",
-    "nspell": "^2.1.5"
   }
 }
