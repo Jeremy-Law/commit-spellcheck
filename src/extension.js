@@ -1,8 +1,10 @@
 const vscode = require('vscode');
 const path = require('path');
 
-const dictionaryEn = require('dictionary-en');
-const nspell = require('nspell');
+// Vendored under vendor/ (see vendor/*/license) so this extension runs
+// straight from a git clone with no package manager involved.
+const dictionaryEn = require('../vendor/dictionary-en');
+const nspell = require('../vendor/nspell');
 
 let speller;
 let spellerReady;
